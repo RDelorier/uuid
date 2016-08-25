@@ -12,7 +12,7 @@ trait HasUuid
      *
      * @return void
      */
-    static function bootUuid()
+    static function bootHasUuid()
     {
         self::creating(function ($model) {
             $model->setAttribute($model->getUidKeyName(), Uuid::uuid1()->toString());
