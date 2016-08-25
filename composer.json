@@ -1,0 +1,20 @@
+{
+    "name": "rdelorier/uuid",
+    "description": "Uuid support for eloquent models",
+    "type": "library",
+    "require": {
+        "illuminate/support": "5.*",
+        "ramsey/uuid": "^3.5"
+    },
+    "authors": [
+        {
+            "name": "Ricky Delorier",
+            "email": "rdelorier@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codesmith\\Eloquent\\Uuid\\": "src/"
+        }
+    }
+}
