@@ -15,7 +15,9 @@ trait HasUuid
     static function bootHasUuid()
     {
         self::creating(function ($model) {
-            $model->setAttribute($model->getUidKeyName(), Uuid::uuid1()->toString());
+            if (! $model->offsetExists($model->getUidKeyName())) {
+                $model->setAttribute($model->getUidKeyName(), Uuid::uuid1()->toString());
+            }
         });
     }
 
